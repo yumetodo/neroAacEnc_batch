@@ -1,0 +1,76 @@
+# neroAacEncバッチファイル
+
+とりあえず、NeroAACエンコーダの面倒な使い方なんかどうでもいいから  
+手っ取り早く、簡単に AAC にエンコードする方法。
+
+## 必要となるもの
+
+1. NeroAacEnc
+2. エンコードバッチファイル(以下で説明)
+
+## NeroAACエンコーダのダウンロード
+
+まず、NeroAACエンコーダをダウンロード。
+Google で検索してダウンロードするか、[Nero AAC エンコーダの使い方](https://silverymemo.wordpress.com/2011/04/01/how-to-neroaacenc/)を参照。
+ダウンロード後、解凍。
+
+## エンコードバッチファイルをダウンロード
+
+このエンコードバッチファイルは、当方が自分用に作ったものです。
+このバッチファイルの改編、再配布等はご自由にどうぞ。
+
+ただ、これはあくまで自分用に作ったものを公開しているだけなので
+このバッチファイルを使用した事によって、何らかの損害、不具合及び不利益が発生したとしても
+当方は責任を負いかねますのでご了承下さい。
+
+バッチファイルのダウンロードは[こちら](https://skydrive.live.com/redir.aspx?cid=ddf35c893bcb506a&resid=DDF35C893BCB506A!172)。
+
+同様に、ダウンロード後、解凍。
+
+## 準備
+
+ダウンロードしたバッチファイルを NeroAacEnc があるフォルダに入れます。
+
+![1](img/batch_001.png)
+
+準備はこれで完了
+
+後は、エンコードしたい 16bit WAVファイルを  
+バッチファイルにドラック＆ドロップするとコマンドプロンプトが開くので  
+好みのエンコード設定にしてエンコードするだけ。
+
+## 使い方
+
+エンコード設定は、設定したい項目の半角数字を入力して [Enter] を押すだけなので簡単。
+
+![2](img/batch_002.png)
+
+![3](img/batch_003.png)
+
+![4](img/batch_004.png)
+
+![5](img/batch_005.png)
+
+
+エンコードが開始される。
+終了するまで待つ。
+
+終了し、画面が消えたら無事完了。
+
+## エンコード出来ない場合
+
+エンコードが出来ない場合、まずファイル名に半角スペースが入っていないかよく確認して下さい。  
+半角スペースを含むファイル名だとエンコード出来ません。
+
+以上お疲れ様でしたー(・ω・)ﾉ
+
+## その他の関連記事
+
+- [Nero AAC エンコーダの使い方](https://silverymemo.wordpress.com/2011/04/01/how-to-neroaacenc/)
+- [NeroAACエンコーダのオプション一覧](https://silverymemo.wordpress.com/2011/07/25/neroaac-options-list/)
+
+![CC BY 2.1 jp](https://i0.wp.com/i.creativecommons.org/l/by/2.1/jp/80x15.png)
+
+[Creative Commons Attribution 2.1 Japan License](http://creativecommons.org/licenses/by/2.1/jp/)
+[https://silverymemo.wordpress.com/2011/07/28/neroaac-batch/](https://silverymemo.wordpress.com/2011/07/28/neroaac-batch/)
+
