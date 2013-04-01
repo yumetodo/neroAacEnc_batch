@@ -11,7 +11,9 @@
 ## NeroAACエンコーダのダウンロード
 
 まず、NeroAACエンコーダをダウンロード。
-Google で検索してダウンロードするか、[Nero AAC エンコーダの使い方](https://silverymemo.wordpress.com/2011/04/01/how-to-neroaacenc/)を参照。
+
+[http://ftp6.nero.com/tools/NeroAACCodec-1.5.1.zip](http://ftp6.nero.com/tools/NeroAACCodec-1.5.1.zip)
+
 ダウンロード後、解凍。
 
 ## エンコードバッチファイルをダウンロード
@@ -42,6 +44,10 @@ Google で検索してダウンロードするか、[Nero AAC エンコーダの
 ## 使い方
 
 エンコード設定は、設定したい項目の半角数字を入力して [Enter] を押すだけなので簡単。
+
+個人的には  
+[1]→[1]→[0.60]  
+でいいと思うのですが・・・。
 
 ![2](img/batch_002.png)
 
