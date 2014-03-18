@@ -1,15 +1,30 @@
-
-@echo off
-
-echo *******************************
-echo *  neroAacEnc encoding batch  *
-echo *******************************
-
+echo **********************************************
+echo *  neroAacEnc encoding batch Remastered 1.00 *
+echo **********************************************
+REM Please connect @yumetodo when you want more infomation.
+setlocal
 set INFILE=%1
-set OUTFILE=%~dp0%~n1
-set EXEFILE=%~dp0neroAacEnc.exe
+set EXEFILEPATH=%~dp0
 
-if not exist %EXEFILE% (goto quit)
+if "%~x1".==".wav". (goto nowstart)
+if "%~x1".==".WAV". (goto nowstart)
+goto quit
+
+
+:nowstart
+if not exist %EXEFILEPATH%neroAacEnc.exe (goto quit)
+REM define where shold we be outputted
+set inputpath=%~dp1
+set name=%~n1
+echo --------------------------------------------------------------------
+echo Please choose the directory where you want to output.
+echo Press [Enter], you can be outputted to the directory of Input-file.
+echo --------------------------------------------------------------------
+echo 例）D:\ライブラリー系\Desktop\
+set /p Outputpath=
+if not %Outputpath%.==. goto enc
+set Outputpath=%inputpath%
+set OUTFILE="%Outputpath%%name%.m4a"
 
 echo ---------------------------
 echo Select a profile you use 
@@ -69,15 +84,19 @@ echo    q 0.95   ===  401 kbps
 
 echo Input Quality
 set /p QUALITY=
-
-%EXEFILE% -q %QUALITY% %PROFILE% -if %INFILE% -of %OUTFILE%.m4a
+pushd %EXEFILEPATH%
+neroAacEnc.exe -ignorelength -q %QUALITY% %PROFILE% -if "%INFILE%" -of %OUTFILE%
+popd
 goto quit
 
 :2pass
 echo Input Bitrate (specify in kbits)
 set /p BITRATE=
 set /a BITRATE=BITRATE*1000
-%EXEFILE% -br %BITRATE% -2pass %PROFILE% -if %INFILE% -of %OUTFILE%.m4a
-
+pushd %EXEFILEPATH%
+neroAacEnc.exe -ignorelength -br %BITRATE% -2pass %PROFILE% -if "%INFILE%" -of %OUTFILE%
+popd
 :quit
+endlocal
+pause
 exit
