@@ -25,7 +25,7 @@
 このバッチファイルを使用した事によって、何らかの損害、不具合及び不利益が発生したとしても
 当方は責任を負いかねますのでご了承下さい。
 
-バッチファイルのダウンロードは[こちら](https://skydrive.live.com/redir.aspx?cid=ddf35c893bcb506a&resid=DDF35C893BCB506A!172)。
+バッチファイルのダウンロードは[こちら](https://github.com/yumetodo/neroAacEnc_batch/releases)。
 
 同様に、ダウンロード後、解凍。
 
